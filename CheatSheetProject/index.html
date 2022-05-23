@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="./resources/css/style.css">
+</head>
+   
+<header>
+    <h1>CSS Selectors and Specificity</h1>
+</header>
+    
+<body>    
+    <!-- Selector Types Table -->
+    <div id='selectortypes'>
+        <h2>Types of Selectors</h2>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>Order of Specificity</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Universal</td>
+                        <td class="html">None</td>
+                        <td class="css">* {style}</td>
+                        <td>Least Specific</td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td class="html">&lt;h1&gt;Heading 1&lt;/h1&gt;</td>
+                        <td class="css">h1 {style}</td>
+                        <td>Less Specific</td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td class="html">&lt;h1 class='guitar'&gt;Heading 1&lt;/h1&gt;</td>
+                        <td class="css">.guitar {style}</td>
+                        <td>More Specific</td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td class="html">&lt;h1 id='telecaster'&gt;Heading 1&lt;/h1&gt;</td>
+                        <td class="css">#telecaster {style}</td>
+                        <td>Most Specific</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <!-- Multiple Selectors Table-->
+    <div id="multipleselectors">
+        <h2>Using Multiple Selectors</h2>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>Usage</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Selector List</td>
+                        <td class="css">h1, h2, h3 {style}</td>
+                        <td>List mutliple selectors separated by commas- <br>can be separated onto individual lines</td>
+                        <td>Applies styles to all listed elements</td>
+                    </tr>
+                    <tr>
+                        <td>Descendant Combinator</td>
+                        <td class="css">h1 li {style}</td>
+                        <td>List multiple selectors with space between</td>
+                        <td>Applies style only to list items that are descendants of h1 elements</td>
+                    </tr>
+                    <tr>
+                        <td>Chaining</td>
+                        <td class="css">h1.guitar</td>
+                        <td>List multiple selectors for no space between</td>
+                        <td>Applies style to h1 elements that also have the 'guitar' class</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+
+</html>
